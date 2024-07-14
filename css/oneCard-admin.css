@@ -1,0 +1,257 @@
+body {}
+
+.import-product,
+.logout {
+    color: #fff;
+    font-size: 16px;
+    padding: 8px 25px;
+    border-radius: 5px;
+    background-color: #e74c3c;
+    line-height: 1;
+    cursor: pointer;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.import-product {
+    background-color: #f68521;
+    max-width: 200px;
+    margin: 15px auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.d-flex {
+    display: flex !important;
+}
+.col {
+    display: flex;
+    /* justify-content: center; */
+    gap: 10px;
+}
+
+.col-12 {
+    width: calc(100% - 10px);
+}
+
+.col-6 {
+    width: calc(50% - 10px);
+}
+
+.col-3 {
+    width: calc(25% - 10px);
+}
+
+.oneCard-form {
+    padding: 30px 10px;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    background-color: #f7f7f7;
+    position: relative;
+    min-height: 500px;
+    /* max-width: 999px; */
+}
+
+.oneCard-form>.title {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.box-block {
+    display: block;
+    overflow: hidden;
+}
+
+.input-block {
+    margin-bottom: 10px;
+    text-align: start;
+    display: flex;
+    gap: 10px;
+}
+
+.input-block.price {
+    background-color: #ffe1e1;
+    padding: 10px;
+}
+
+.input-block label {
+    width: 20% !important;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.input-block input {
+    width: 70% !important;
+}
+
+.box-block .btn-submit {
+    display: block;
+    background-color: #f48423 !important;
+    font-size: 16px;
+    border: 0;
+    padding: 5px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    width: 150px;
+}
+
+.user-data {
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.user-data .title {
+    margin-left: 10px;
+    text-transform: capitalize;
+}
+
+/*= products_show
+------------------------------------*/
+.products_show {
+    margin: 15px auto;
+}
+
+.products_show .row {
+    justify-content: start;
+}
+
+.singel-product {
+    overflow: hidden;
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 20px 10px;
+    border-radius: 15px;
+}
+
+.singel-product.active {
+    background-color: rgb(243 156 18 / 40%);
+}
+
+.singel-product .productImage {
+    margin-bottom: 10px;
+}
+
+.singel-product .productImage img {
+    max-width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.singel-product .product_data {}
+
+.singel-product .product_data .productName {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.singel-product .product_data .productPrice {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #f68521;
+}
+
+.singel-product .choose_product {
+    display: block;
+    overflow: hidden;
+}
+
+.singel-product .choose_product label {
+    background-color: #3498db;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    display: block;
+    border-radius: 5px;
+    text-align: center;
+
+}
+
+.singel-product .choose_product input[type="checkbox"] {
+    display: none;
+}
+.singel-product.out-stock {
+    opacity: .7;
+    background: #e1e1e1;
+}
+.singel-product.out-stock .choose_product label {
+    background-color: #e74c3c;
+}
+/* = Loding
+---------------------------*/
+.loding-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(21 45 61 / 70%);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.loding {
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border-top: 10px solid #e74c3c;
+    position: relative;
+    animation: a1 2s linear infinite;
+}
+
+.loding:before,
+.loding:after {
+    content: '';
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
+.loding:before {
+    border-top: 10px solid #e67e22;
+    transform: rotate(120deg);
+}
+
+.loding:after {
+    border-top: 10px solid #3498db;
+    transform: rotate(240deg);
+}
+
+.loding span {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    line-height: 200px;
+    color: #fff;
+    animation: a2 2s linear infinite;
+}
+
+@keyframes a1 {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes a2 {
+    to {
+        transform: rotate(-360deg);
+    }
+}
